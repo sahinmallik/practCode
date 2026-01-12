@@ -1,3 +1,5 @@
+"use server";
+
 import { db } from "@/lib/db";
 
 import { currentUser } from "@clerk/nextjs/server";
@@ -11,8 +13,10 @@ export const onboardUser = async () => {
     }
 
     const { id, firstName, lastName, imageUrl, emailAddresses } = User;
-
-    const newUser = await db.User.upsert({
+    if (!emailAddresses?.length || !emailAddresses[0]?.emailAddress) {
+      return { success: false, error: "User email not found" };
+    }
+    const newUser = await db.user.upsert({
       where: {
         clerkId: id,
       },
