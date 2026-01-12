@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: practcode_build
+    environment:
+      POSTGRES_DB: practcode
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: practcode002
+    ports:
+      - "5433:5432"
+    volumes:
+      - practcode_db_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+volumes:
+  practcode_db_data:
