@@ -1,10 +1,13 @@
 import { Button } from "@/components/ui/button";
+import { onboardUser } from "@/modules/auth/actions";
+import { UserButton } from "@clerk/nextjs";
 import Image from "next/image";
 
-export default function Home() {
+export default async function Home() {
+  await onboardUser();
   return (
     <div className="flex h-screen justify-center items-center">
-      <Button variant="outline">Click Me</Button>
+      <UserButton showName />
     </div>
   );
 }
