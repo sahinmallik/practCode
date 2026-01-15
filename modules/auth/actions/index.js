@@ -3,8 +3,6 @@
 import { db } from "@/lib/db";
 
 import { currentUser } from "@clerk/nextjs/server";
-import { LucideChartNoAxesColumnIncreasing } from "lucide-react";
-import { success } from "zod";
 
 export const onboardUser = async () => {
   try {

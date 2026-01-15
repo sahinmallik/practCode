@@ -16,27 +16,27 @@ const Navbar = ({ userRole }) => {
         <div className="px-6 py-4 flex justify-between items-center">
           <Link href={"/"} className="flex items-center gap-2">
             <Image src={"/logo.svg"} alt="TreeBio" width={42} height={42} />
-            <span className="font-bold text-2xl tracking-widest text-amber-300">
-              LeetCode
+            <span className="font-bold text-2xl tracking-widest text-green-600 dark:text-green-300">
+              PractCode
             </span>
           </Link>
 
           <div className="flex flex-row items-center justify-center gap-x-4">
             <Link
               href="/problems"
-              className="text-sm font-medium text-zinc-600 dark:text-zinc-400  hover:text-amber-600 cursor-pointer dark:hover:text-amber-400"
+              className="text-sm font-medium text-zinc-600 dark:text-zinc-400  hover:text-green-600 cursor-pointer dark:hover:text-green-400"
             >
               Problems
             </Link>
             <Link
               href="/about"
-              className="text-sm font-medium text-zinc-600 dark:text-zinc-400  hover:text-amber-600 cursor-pointer dark:hover:text-amber-400"
+              className="text-sm font-medium text-zinc-600 dark:text-zinc-400  hover:text-green-600 cursor-pointer dark:hover:text-green-400"
             >
               About
             </Link>
             <Link
               href="/profile"
-              className="text-sm font-medium text-zinc-600 dark:text-zinc-400  hover:text-amber-600 cursor-pointer dark:hover:text-amber-400"
+              className="text-sm font-medium text-zinc-600 dark:text-zinc-400  hover:text-green-600 cursor-pointer dark:hover:text-green-400"
             >
               Profile
             </Link>
@@ -69,7 +69,7 @@ const Navbar = ({ userRole }) => {
                 <SignUpButton>
                   <Button
                     size="sm"
-                    className="text-sm font-medium bg-amber-400 hover:bg-amber-500 text-white"
+                    className="text-sm font-medium bg-green-400 hover:bg-green-500 dark:bg-green-600 dark:hover:bg-green-800 text-white"
                   >
                     Sign Up
                   </Button>

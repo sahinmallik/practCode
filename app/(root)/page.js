@@ -65,7 +65,7 @@ export default async function Home() {
       description:
         "Perfect for getting started with basic programming concepts and syntax.",
       count: "500+ Problems",
-      color: "amber",
+      color: "green",
     },
     {
       level: "Intermediate",
@@ -73,7 +73,7 @@ export default async function Home() {
       description:
         "Challenge yourself with data structures and algorithm problems.",
       count: "800+ Problems",
-      color: "indigo",
+      color: "cyan",
     },
     {
       level: "Advanced",
@@ -81,7 +81,7 @@ export default async function Home() {
       description:
         "Master complex algorithms and compete in programming contests.",
       count: "300+ Problems",
-      color: "amber",
+      color: "green",
     },
   ];
 
@@ -93,7 +93,7 @@ export default async function Home() {
           {/* Badge */}
           <Badge
             variant="secondary"
-            className="mb-8 bg-amber-50 dark:bg-amber-950 text-amber-700 dark:text-amber-300 border-amber-200 dark:border-amber-800 hover:bg-amber-100 dark:hover:bg-amber-900"
+            className="mb-8 bg-green-50 dark:bg-green-950 text-green-700 dark:text-green-300 border-green-200 dark:border-green-800 hover:bg-green-100 dark:hover:bg-green-900"
           >
             <Star className="w-4 h-4 mr-2" />
             Join 10,000+ developers already coding
@@ -103,7 +103,7 @@ export default async function Home() {
           <h1 className="text-2xl md:text-5xl lg:text-6xl font-black text-gray-900 dark:text-white leading-tight mb-8">
             Master{" "}
             <span className="relative inline-block">
-              <span className="px-6 py-3 bg-amber-500 dark:bg-amber-400 text-white dark:text-gray-900 rounded-2xl transform -rotate-1 inline-block shadow-lg">
+              <span className="px-6 py-3 bg-green-500 dark:bg-green-400 text-white dark:text-gray-900 rounded-2xl transform -rotate-1 inline-block shadow-lg">
                 Problem
               </span>
             </span>{" "}
@@ -111,7 +111,7 @@ export default async function Home() {
             <br />
             with{" "}
             <span className="relative inline-block">
-              <span className="px-6 py-3 bg-indigo-600 dark:bg-indigo-500 text-white rounded-2xl transform rotate-1 inline-block shadow-lg">
+              <span className="px-6 py-3 bg-cyan-400 dark:bg-cyan-500 text-white rounded-2xl transform rotate-1 inline-block shadow-lg">
                 Code
               </span>
             </span>
@@ -128,7 +128,7 @@ export default async function Home() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
             <Button
               size="lg"
-              className="bg-amber-500 hover:bg-amber-600 dark:bg-amber-400 dark:hover:bg-amber-500 text-white dark:text-gray-900 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all"
+              className="bg-green-500 hover:bg-green-600 dark:bg-green-400 dark:hover:bg-green-500 text-white dark:text-gray-900 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all"
             >
               <Play className="w-5 h-5 mr-2" />
               Start Coding Now
@@ -137,7 +137,7 @@ export default async function Home() {
             <Button
               variant="outline"
               size="lg"
-              className="border-2 border-indigo-300 dark:border-indigo-600 text-indigo-700 dark:text-indigo-300 hover:bg-indigo-50 dark:hover:bg-indigo-950"
+              className="border-2 border-cyan-300 dark:border-cyan-600 text-cyan-700 dark:text-cyan-300 hover:bg-cyan-50 dark:hover:bg-cyan-950"
             >
               Browse Problems
             </Button>
@@ -168,7 +168,7 @@ export default async function Home() {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
               Everything you need to{" "}
-              <span className="text-amber-600 dark:text-amber-400">excel</span>
+              <span className="text-green-600 dark:text-green-400">excel</span>
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
               Our platform provides comprehensive tools and resources to help
@@ -186,12 +186,12 @@ export default async function Home() {
                   <div
                     className={`w-12 h-12 ${
                       index % 2 === 0
-                        ? "bg-amber-100 dark:bg-amber-900"
-                        : "bg-indigo-100 dark:bg-indigo-900"
+                        ? "bg-green-100 dark:bg-green-900"
+                        : "bg-cyan-100 dark:bg-cyan-900"
                     } rounded-xl flex items-center justify-center ${
                       index % 2 === 0
-                        ? "text-amber-600 dark:text-amber-400"
-                        : "text-indigo-600 dark:text-indigo-400"
+                        ? "text-green-600 dark:text-green-400"
+                        : "text-cyan-600 dark:text-cyan-400"
                     } mb-4`}
                   >
                     {feature.icon}
@@ -217,7 +217,7 @@ export default async function Home() {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
               Choose your{" "}
-              <span className="text-indigo-600 dark:text-indigo-400">
+              <span className="text-cyan-600 dark:text-cyan-400">
                 challenge
               </span>
             </h2>
@@ -231,18 +231,18 @@ export default async function Home() {
               <Card
                 key={index}
                 className={`border-2 hover:shadow-lg transition-all duration-200 ${
-                  category.color === "amber"
-                    ? "bg-amber-50 dark:bg-amber-950/30 border-amber-200 dark:border-amber-800 hover:border-amber-300 dark:hover:border-amber-700"
-                    : "bg-indigo-50 dark:bg-indigo-950/30 border-indigo-200 dark:border-indigo-800 hover:border-indigo-300 dark:hover:border-indigo-700"
+                  category.color === "green"
+                    ? "bg-green-50 dark:bg-green-950/30 border-green-200 dark:border-green-800 hover:border-green-300 dark:hover:border-green-700"
+                    : "bg-cyan-50 dark:bg-cyan-950/30 border-cyan-200 dark:border-cyan-800 hover:border-cyan-300 dark:hover:border-cyan-700"
                 }`}
               >
                 <CardHeader>
                   <Badge
                     variant="secondary"
                     className={`w-fit ${
-                      category.color === "amber"
-                        ? "bg-amber-100 dark:bg-amber-900 text-amber-700 dark:text-amber-300"
-                        : "bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300"
+                      category.color === "green"
+                        ? "bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300"
+                        : "bg-cyan-100 dark:bg-cyan-900 text-cyan-700 dark:text-cyan-300"
                     }`}
                   >
                     {category.level}
@@ -257,9 +257,9 @@ export default async function Home() {
                   </CardDescription>
                   <div
                     className={`font-semibold ${
-                      category.color === "amber"
-                        ? "text-amber-600 dark:text-amber-400"
-                        : "text-indigo-600 dark:text-indigo-400"
+                      category.color === "green"
+                        ? "text-green-600 dark:text-green-400"
+                        : "text-cyan-600 dark:text-cyan-400"
                     }`}
                   >
                     {category.count}
@@ -272,7 +272,7 @@ export default async function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-gradient-to-r from-amber-600 to-amber-300  dark:from-amber-600 dark:to-indigo-600 rounded-md">
+      <section className="py-24 bg-gradient-to-r from-green-600 to-green-300  dark:from-green-600 dark:to-cyan-600 rounded-md">
         <div className="max-w-4xl mx-auto text-center px-4">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Ready to start your coding journey?
@@ -289,6 +289,9 @@ export default async function Home() {
           </Button>
         </div>
       </section>
+      <footer className="min-h-25 w-full flex justify-center items-center">
+        Created By Sahin Mallik With ❤️.
+      </footer>
     </div>
   );
 }
