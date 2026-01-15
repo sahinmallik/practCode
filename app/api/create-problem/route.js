@@ -1,3 +1,4 @@
+import { db } from "@/lib/db";
 import { getJudge0Id, pullBatchResults, submitBatch } from "@/lib/judge0";
 import { currentUserRole } from "@/modules/auth/actions";
 import { currentUser } from "@clerk/nextjs/server";
@@ -55,7 +56,7 @@ export async function POST(req) {
       );
     }
 
-    if (!referenceSolutions || typeof referenceSolutions !== object) {
+    if (!referenceSolutions || typeof referenceSolutions !== "object") {
       return NextResponse.json(
         {
           error:
@@ -98,7 +99,7 @@ export async function POST(req) {
       for (let i = 0; i < results.length; i++) {
         const result = results[i];
         if (result.status.id !== 3) {
-          NextResponse.json(
+          return NextResponse.json(
             {
               error: `Validation failed for ${language}`,
               testCase: {
@@ -140,6 +141,10 @@ export async function POST(req) {
     );
   } catch (error) {
     console.error("Error Occured: ", error);
+    return NextResponse.json(
+      { error: "Internal server error" },
+      { status: 500 }
+    );
   }
 }
 
